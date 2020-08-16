@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/border_search"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/icon_search"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_search_black_24dp"></ImageView>
+
+            <EditText
+                android:id="@+id/edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/icon_search"></EditText>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/dateUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"></TextView>
+
+        <ProgressBar
+            android:id="@+id/progessbar"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"></ProgressBar>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listCountry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/dateUpdate"></androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+</layout>
